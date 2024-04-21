@@ -1,0 +1,134 @@
+/* 
+    James Carlson
+    Coding Temple - SE FT-144
+    Frontend Module 8 Lesson 3 Assignment: CSS Layout Design
+
+    Assignment: 1. Mastering Responsive Design with CSS Flexbox 
+*/
+
+body {
+    margin: 0px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:medium;
+
+    background: linear-gradient(80deg, rgb(241, 252, 255), rgb(232, 246, 255), rgb(234, 239, 255), rgb(214, 228, 255));
+}
+
+nav {
+    min-height: 72px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: linear-gradient(rgb(10, 10, 92), rgb(54, 54, 184))
+}
+
+.nav-group {
+    margin: 16px 100px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+nav a, footer a {
+    margin: 10px 30px;
+    color:white;
+    text-decoration: none;
+}
+
+nav a:hover, footer a:hover {
+    color:pink;
+}
+
+header {
+    height: 144px;    
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url("./images/pool_1.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.borderline {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    display: block;
+}
+
+h1 {
+
+    margin: 0;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+
+    font-size: 64px;
+    text-align: center;
+    font-weight: bold;
+}
+
+main {
+    margin: 40px 14%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.facts-intro {
+    min-height: 100px;
+    background-color:dodgerblue;
+    padding: 20px 40px;
+    border-radius: 20px;
+    color: white;
+}
+
+.facts-list {
+    
+    margin: 60px 10%;
+}
+
+li:nth-child(even){
+    color: rgb(14, 0, 92);
+}
+
+li {
+    margin-bottom: 18px;
+}
+
+footer {
+    height: 180px;
+
+    display: flex;
+    justify-content: end;
+    align-items: top;
+    
+    background: linear-gradient(rgb(54, 54, 184), rgb(10, 10, 92))
+}
+
+
+/* Responsive Styling at or below 600px */
+@media only screen and (max-width:600px) {
+
+    body {
+        font-size: small;
+    }
+
+    .nav-group {
+        margin: 24px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .facts-list {
+        margin: 30px 0px;
+    }
+}
